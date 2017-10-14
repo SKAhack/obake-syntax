@@ -1,0 +1,61 @@
+.syntax--js {
+  &.syntax--storage {
+    color: @mono-0;
+    &.syntax--type.syntax--function {
+      color: @mono-1;
+
+      &.syntax--arrow {
+        color: @blue;
+      }
+    }
+  }
+  &.syntax--constant {
+    color: @green;
+  }
+  &.syntax--string {
+    &.syntax--unquoted {
+      color: @mono-1;
+    }
+  }
+  &.syntax--boolean,
+  &.syntax--numeric,
+  &.syntax--null {
+    color: @green;
+  }
+  &.syntax--accessor {
+    color: @mono-1;
+  }
+}
+
+.syntax--jsx {
+  &.syntax--component {
+    color: @orange-1;
+  }
+  &.syntax--entity {
+    &.syntax--other {
+      &.syntax--attribute-name {
+        color: @mono-1;
+        font-style: normal;
+      }
+    }
+  }
+}
+atom-text-editor {
+  .syntax--jsx {
+    .syntax--attribute-name {
+      font-style: normal !important;
+    }
+  }
+}
+
+.syntax--flowtype {
+  &.syntax--type {
+    color: @purple;
+  }
+  &.syntax--keyword {
+    color: @mono-0;
+  }
+  &.syntax--punctuation {
+    color: @mono-1;
+  }
+}
